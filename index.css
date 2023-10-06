@@ -7,6 +7,7 @@ html, body {
 /* typography and icons */
 
 h1{
+    display: inline;
     color: #0F8CDF;
     margin-bottom: 10px;
     font-size: 20px;
@@ -48,7 +49,7 @@ header{
 
 /* textareas + btn */
 
-textarea{
+#tweet-input{
     border: none;
     resize: none;
     padding: 10px;
@@ -59,7 +60,7 @@ textarea{
     line-height: 30px;
 }
 
-button{
+#tweet-btn{
     background-color: #1DA1F2;
     border: none;
     color: white;
@@ -69,6 +70,57 @@ button{
     cursor: pointer;
     font-size: 20px;
     font-weight: 600;
+}
+
+#tweet-btn:hover{
+    background-color: #0F8CDF;
+}
+
+.tweet-reply-input{
+    box-sizing: border-box;
+    border: none;
+    resize: none;
+    padding: 10px;
+    margin: 0 0 20px 0;
+    height: 60px;
+    width: 100%;
+    font-size: 14px;
+}
+
+.reply-btn{
+    background-color: #1DA1F2;
+    border: none;
+    color: white;
+    padding: 10px 19px;
+    border-radius: 20px;
+    width: 100%; 
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.reply-btn:hover{
+    background-color: #0F8CDF;
+}
+
+#username-input{
+    width: 80px;
+    margin: 0 5px 0 110px;
+    border-radius: 0;
+    border: none;
+    border-bottom: 1px solid grey;
+    padding: 0 0 0 5px;
+}
+
+#username-btn{
+    margin: 0;
+    background-color: #1DA1F2;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+#username-btn:hover{
+    background-color: #0F8CDF;
 }
 
 /* tweet */
@@ -98,11 +150,15 @@ button{
     gap: 4px;
 }
 
+.replies-div {
+    box-sizing: border-box;
+}
+
 .tweet-reply{
     border-top: 1px solid lightgray;
     padding: 20px 0 0 0px;
     margin: 10px 0 10px 40px;
-    width: 80%;
+    width: 86%;
 }
 
 .handle{
@@ -113,9 +169,11 @@ button{
 }
 
 .tweet-text{
-    width: 207px;
+    width: 190px;
     font-size: 14px;
     line-height: 20px;
+    word-wrap: break-word;
+    white-space: pre-wrap;
 }
 
 /* images */
@@ -124,6 +182,7 @@ button{
     border: 1px solid lightgray;
     border-radius: 50%;
     width: 48px;
+    object-fit: scale-down;
 }
 
 /* utility */
