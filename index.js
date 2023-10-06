@@ -97,7 +97,7 @@ function handleReplyClick(replyId){
 
 function handleTweetBtnClick(){
     const tweetInput = document.getElementById('tweet-input')
-    if(tweetInput.value){
+    if(tweetInput.value.trim()){
         var escape = document.createElement('textarea')
         escape.textContent = tweetInput.value
         let inputValue = {
@@ -125,7 +125,7 @@ function handleUsernameBtnClick(){
 function handleReplyBtnClick(replyId){
     const replyInput = document.querySelector(`[data-reply-input="${replyId}"]`)
     let repliesInDB = ref(database, `ximba/${replyId}/replies`)
-    if(replyInput.value){
+    if(replyInput.value.trim()){
         var escape = document.createElement('textarea')
         escape.textContent = replyInput.value
         get(repliesInDB).then(function(snapshot){
